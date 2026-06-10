@@ -19,25 +19,25 @@ export default function AddToCart({ product }: { product: Product }) {
     <div>
       <div className="mb-2 flex items-center justify-between">
         <span className="tnav">Talla</span>
-        <button className="text-[12px] text-[var(--muted)] underline underline-offset-2">Guía de tallas</button>
+        <button className="text-[12px] text-neutral-500 underline underline-offset-2">Guía de tallas</button>
       </div>
       <div className="flex flex-wrap gap-2">
         {product.sizes.map((s) => (
           <button
             key={s}
             onClick={() => { setSize(s); setErr(false); }}
-            className={`min-w-12 border px-3 py-2.5 text-[13px] transition-colors ${size === s ? "border-[var(--ink)] bg-[var(--ink)] text-white" : "border-[var(--line)] hover:border-[var(--ink)]"}`}
+            className={`min-w-12 border px-3 py-2.5 text-[13px] transition-colors ${size === s ? "border-black bg-black text-white" : "border-neutral-200 hover:border-black"}`}
           >
             {s}
           </button>
         ))}
       </div>
-      {err && <p className="mt-2 text-[12px] text-[var(--sale)]">Selecciona una talla.</p>}
+      {err && <p className="mt-2 text-[12px] text-red-700">Selecciona una talla.</p>}
 
-      <button onClick={onAdd} className="mt-5 w-full bg-[var(--ink)] py-4 text-white tnav transition-opacity hover:opacity-85">
+      <button onClick={onAdd} className="mt-5 w-full bg-black py-4 text-white tnav transition-opacity hover:opacity-85">
         Añadir a la cesta
       </button>
-      <button onClick={onAdd} className="mt-2 w-full border border-[var(--ink)] py-4 tnav transition-colors hover:bg-[#f4f4f4]">
+      <button onClick={onAdd} className="mt-2 w-full border border-black py-4 tnav transition-colors hover:bg-[#f4f4f4]">
         Comprar ahora
       </button>
     </div>

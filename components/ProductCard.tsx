@@ -15,7 +15,7 @@ export default function ProductCard({ p, priority }: { p: Product; priority?: bo
       <div className="mt-2.5">
         <h3 className="text-[13px] leading-snug">{p.name}</h3>
         <div className="mt-0.5 flex items-center justify-between">
-          <span className="text-[13px] text-[var(--muted)]">{p.color}</span>
+          <span className="text-[13px] text-neutral-500">{p.color}</span>
           <span className="text-[13px] font-medium">{formatCOP(p.price)}</span>
         </div>
       </div>

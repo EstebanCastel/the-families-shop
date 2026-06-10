@@ -15,8 +15,8 @@ export default function Home() {
           <p className="tnav mb-3 text-white/80">Capítulo 01 — Santos del Hogar</p>
           <h1 className="text-4xl font-semibold upper md:text-6xl">Nueva colección</h1>
           <div className="mt-6 flex justify-center gap-3">
-            <Link href="/novedades" className="bg-white px-8 py-3 text-[var(--ink)] tnav transition-colors hover:bg-[var(--ink)] hover:text-white">Comprar</Link>
-            <Link href="/categoria/abrigos" className="border border-white px-8 py-3 tnav transition-colors hover:bg-white hover:text-[var(--ink)]">Abrigos</Link>
+            <Link href="/novedades" className="bg-white px-8 py-3 text-black tnav transition-colors hover:bg-black hover:text-white">Comprar</Link>
+            <Link href="/categoria/abrigos" className="border border-white px-8 py-3 tnav transition-colors hover:bg-white hover:text-black">Abrigos</Link>
           </div>
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function Home() {
       <section className="mx-auto max-w-[1400px] px-4 pb-6 md:px-8">
         <div className="mb-6 flex items-end justify-between">
           <h2 className="text-xl font-semibold upper md:text-2xl">Novedades</h2>
-          <Link href="/novedades" className="tnav text-[var(--muted)] hover:text-[var(--ink)]">Ver todo</Link>
+          <Link href="/novedades" className="tnav text-neutral-500 hover:text-black">Ver todo</Link>
         </div>
         <div className="grid grid-cols-2 gap-x-3 gap-y-8 md:grid-cols-4 md:gap-x-5">
           {featured.map((p, i) => <ProductCard key={p.slug} p={p} priority={i < 4} />)}
